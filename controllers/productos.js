@@ -73,7 +73,7 @@ const actualizarProducto = async(req,res)=>{
          producto
     });
 }
-//borrarCategoria - estado false 
+
 const  productoDelete= async( req,res = response)=>
 {
     const { id } = req.params;
