@@ -7,6 +7,9 @@
     "start":"node app"
 
   },
+  "engines": {
+    "node": "18.7.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
