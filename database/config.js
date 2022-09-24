@@ -1,20 +1,31 @@
+
 const mongoose = require('mongoose');
 
-const dbConecction = async () => {
+
+
+const dbConecction = async() => {
+
     try {
- await mongoose.connect(process.env.MONGODB,{
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true
- });
- console.log('base de datos conectada');
-        
+
+        await mongoose.connect( process.env.MONGODB, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useCreateIndex: true,
+            useFindAndModify: false
+        });
+    
+        console.log('Base de datos online');
+
     } catch (error) {
-        console.log(error)
-        throw new Error('Error de coneccion bas e de datos')
+        console.log(error);
+        throw new Error('Error a la hora de iniciar la base de datos');
     }
+
 
 }
 
-module.exports={dbConecction};
+
+
+module.exports = {
+    dbConecction
+}
