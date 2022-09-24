@@ -27,6 +27,7 @@
 
        
         const {nombre,correo,password,rol} = req.body
+     
        const usuario = new Usuario({nombre,correo,password,rol});
     
      //verificar si el correo existe
